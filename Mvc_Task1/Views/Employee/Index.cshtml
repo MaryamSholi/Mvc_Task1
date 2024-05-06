@@ -1,0 +1,27 @@
+﻿@model List<Employee>
+<div class="pb-5 ">
+    <h2 class="text-center py-1 bg-danger text-white">All Employees</h2>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Title</th>
+            <th scope="col">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Title</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
